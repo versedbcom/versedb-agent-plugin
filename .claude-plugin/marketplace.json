@@ -11,7 +11,7 @@
       "displayName": "VerseDB: Comic Book Tracker",
       "source": "./",
       "description": "Search, catalog, and discover comics through the VerseDB MCP.",
-      "version": "0.1.10",
+      "version": "0.1.11",
       "author": {
         "name": "VerseDB",
         "email": "hello@versedb.com"

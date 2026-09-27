@@ -27,6 +27,16 @@ The MCP itself connects at `https://versedb.com/mcp/api`. Installing the plugin 
 
 You'll need a VerseDB [Pro subscription](https://versedb.com/pro). The hosted MCP requires Pro for **every** tool, search and browse included. Without it, calls come back with a `pro_required` / HTTP 402 error.
 
+## Data and privacy
+
+The plugin doesn't read, store, or send any credential from your machine. There are no API keys,
+environment variables, or config files involved. The one connection it declares is the VerseDB MCP
+at `https://versedb.com/mcp/api`, and you sign in to it through your client's own OAuth flow. The
+client keeps that token and uses it only for versedb.com.
+
+Tool calls go to VerseDB and nowhere else. What VerseDB does with your account data is covered by
+its [privacy policy](https://versedb.com/policy/privacy).
+
 ## Install
 
 The plugin lives in a marketplace on GitHub (`versedbcom/versedb-agent-plugin`). You add the
