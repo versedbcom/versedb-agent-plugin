@@ -1,7 +1,5 @@
 {
-  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "versedb",
-  "displayName": "VerseDB: Comic Book Tracker",
   "version": "0.1.13",
   "description": "Search, catalog, and discover comics through the VerseDB MCP. Bundles the connection plus skills for reading orders, collection insights, discovery, pull-list planning, quick cataloging, character dossiers, and creator spotlights.",
   "author": {
@@ -11,9 +9,6 @@
   "homepage": "https://versedb.com",
   "repository": "https://github.com/versedbcom/versedb-agent-plugin",
   "license": "MIT",
-  "icon": "./.claude-plugin/icon.svg",
-  "privacyPolicyUrl": "https://versedb.com/policy/privacy",
-  "termsOfServiceUrl": "https://versedb.com/policy/terms",
   "keywords": [
     "comics",
     "manga",
@@ -23,5 +18,19 @@
     "reading-order",
     "pull-list",
     "market-prices"
-  ]
+  ],
+  "skills": [
+    "./skills/",
+    "./openai/skills/"
+  ],
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "VerseDB: Comic Book Tracker",
+    "shortDescription": "Search, catalog, and discover comics",
+    "developerName": "VerseDB",
+    "category": "Productivity",
+    "websiteURL": "https://versedb.com",
+    "privacyPolicyURL": "https://versedb.com/policy/privacy",
+    "termsOfServiceURL": "https://versedb.com/policy/terms"
+  }
 }

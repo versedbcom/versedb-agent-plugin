@@ -73,8 +73,17 @@ claude --plugin-dir /path/to/versedb-agent-plugin
 ### OpenAI
 
 Find **VerseDB** in the OpenAI plugin directory and install it. You'll be asked to sign in to
-your VerseDB account the first time a tool runs. On OpenAI the two agents ship as skills of the
-same name (`comic-concierge` and `comic-research`), since agents aren't supported there.
+your VerseDB account the first time a tool runs. On OpenAI the two agents ship as skills
+(`comic-concierge` and `comic-research`), since agents aren't supported there.
+
+### Codex (command line)
+
+```text
+codex plugin marketplace add versedbcom/versedb-agent-plugin
+codex plugin add versedb@versedb
+```
+
+That gives you all nine skills, the two agents included, same as the OpenAI directory.
 
 ## Usage
 
