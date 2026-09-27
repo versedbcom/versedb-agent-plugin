@@ -17,7 +17,7 @@ The VerseDB MCP is Pro-only, every tool including search. If a call returns an a
 
 A creator's contribution is **role-scoped**: the same person may write one book and draw another. Group credits by role.
 
-1. Pull the series and issues they're credited on (`get-tool` (`type: creator`), then `search-tool` (`type: issue`) / `get-series-issues-tool` to fill in the full runs). Walk every page (25 by default; pass `per_page` up to 100); a prolific creator's credits run to many pages.
+1. Pull the series and issues they're credited on (`get-tool` (`type: creator`), then `search-tool` (`type: issue`) / `get-series-issues-tool` to fill in the full runs). Walk every page (25 by default; set `per_page` as high as 100); a prolific creator's credits run to many pages.
 2. Separate by role using the credits on `get-tool` (`type: issue`) (writer vs. penciller/inker/colorist/letterer/cover/editor). Use the `versedb://creator-roles` resource for the canonical labels rather than guessing.
 3. Identify **runs**, not scattered single credits. A continuous stretch on one series ("#1–50 of Daredevil") is the unit that matters.
 4. Note recurring **collaborators**, like the artist a writer keeps pairing with, and the **publishers** they work with.

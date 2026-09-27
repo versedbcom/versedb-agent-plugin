@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "versedb",
   "displayName": "VerseDB: Comic Book Tracker",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Search, catalog, and discover comics through the VerseDB MCP. Bundles the connection plus skills for reading orders, collection insights, discovery, pull-list planning, quick cataloging, character dossiers, and creator spotlights.",
   "author": {
     "name": "VerseDB",

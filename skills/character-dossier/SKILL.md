@@ -15,7 +15,7 @@ The VerseDB MCP is Pro-only, every tool including search. If a call returns an a
 
 ## Build the dossier
 
-Gather each piece from its own source. Walk every page (25 by default; pass `per_page` up to 100) on every list; a character with decades of history won't fit on one page.
+Gather each piece from its own source. Walk every page (25 by default; set `per_page` as high as 100) on every list; a character with decades of history won't fit on one page.
 
 - **First appearance & key issues:** surface the debut and other significant books, labeled with their significance from each issue's `key_issue_reasons` in `get-tool` (`type: issue`): 1st appearance, origin, death, first cover, and so on. `get-key-issue-reasons-tool` only searches the reason names ("First appearance of Punisher"); it doesn't say which issue carries one.
 - **Affiliations:** teams they belong to (`search-tool` (`type: team`) / `get-tool` (`type: team`)) and the universe they live in (`get-tool` (`type: universe`)).

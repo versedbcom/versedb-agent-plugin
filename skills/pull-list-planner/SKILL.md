@@ -9,7 +9,7 @@ Keep the user current on the ongoing series they follow. The whole VerseDB MCP i
 
 ## Where they stand
 
-- `get-my-pull-list-tool` lists the series they follow. Walk every page (25 by default; pass `per_page` up to 100), or series go missing.
+- `get-my-pull-list-tool` lists the series they follow. Walk every page (25 by default; set `per_page` as high as 100), or series go missing.
 - `get-upcoming-releases-tool` with `pull_list_only: true` returns only what's shipping for series on their active pull list. Walk its pages too (50 by default, up to 100); a busy week runs past one.
 - `get-series-progress-tool`, run per followed series, flags where they've fallen behind (issues out but unread).
 

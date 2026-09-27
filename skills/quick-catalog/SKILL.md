@@ -21,7 +21,7 @@ Normalize each line to `{ title/series, issue number, year?, grade?, condition?,
 
 When the input is an image, read what you can off the comic itself before searching:
 - **From the cover:** the series title, issue number, publisher trade dress, and any printed cover date or price. That's usually enough to resolve the issue.
-- **From the barcode:** read the printed digits and pass them to `lookup-by-barcode-tool` (handles both UPC and ISBN). A single hit resolves the issue directly. Comic UPCs are shared across issues and reprints, and pre-1995 barcodes are unreliable, so the tool often returns several candidates. When it does, match against the cover to pick the right one. If nothing matches, fall back to resolving from the cover.
+- **From the barcode:** read the printed digits and look them up with `lookup-by-barcode-tool` (handles both UPC and ISBN). A single hit resolves the issue directly. Comic UPCs are shared across issues and reprints, and pre-1995 barcodes are unreliable, so the tool often returns several candidates. When it does, match against the cover to pick the right one. If nothing matches, fall back to resolving from the cover.
 - A cover photo rarely tells you whether you're holding a **variant** or the base printing. When it's unclear, surface the candidates and let the user confirm, same as any other ambiguous entry.
 
 Tell the user what you read from the image, and ask them to fill in anything the photo can't show (grade/condition, or which variant).
@@ -41,10 +41,10 @@ For each entry:
 - Show the resolved set as a table (`Series (year) #N — grade/condition`) and the unresolved set separately. Get a go-ahead before writing.
 - `collection-tool` (`operation: add`) per book. Walk the list; **verify after writing** by reading back (`get-my-collection-tool`) that the count increased by the expected amount.
 - Skip duplicates already in the collection rather than double-adding; report them.
-- Walk every page (25 by default; pass `per_page` up to 100) of `get-my-collection-tool` for the dupe check and the read-back, and of `get-series-issues-tool` for a long range. Page one alone misses books.
+- Walk every page (25 by default; set `per_page` as high as 100) of `get-my-collection-tool` for the dupe check and the read-back, and of `get-series-issues-tool` for a long range. Page one alone misses books.
 
 ## Report
 
-Summarize: added N, skipped M dupes, K still need the user's input. For the leftovers, give the candidate options so the next pass is one reply.
+Summarize: added N, skipped M dupes, K still need the user's input. For the leftovers, give the candidate options so the next round takes one reply.
 
-Offer to record grades/conditions you didn't have, or to start a want-list (`list-tool` (`operation: create`)) for anything they don't own yet. If they're hunting a specific cover, pass its `variant_id` on `add_item`; leave it off when any printing will do.
+Offer to record grades/conditions you didn't have, or to start a want-list (`list-tool` (`operation: create`)) for anything they don't own yet. If they're hunting a specific cover, include its `variant_id` on `add_item`; leave it off when any printing will do.

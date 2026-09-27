@@ -9,7 +9,7 @@ Turn a user's collection into something they can act on: what it's worth, where 
 
 ## Pull the collection
 
-Start with `get-my-collection-tool`. Its `summary` covers the whole collection, so you don't need every page for the totals. Walk every page (25 by default; pass `per_page` up to 100) before listing books, or the per-book sections come out short.
+Start with `get-my-collection-tool`. Its `summary` covers the whole collection, so you don't need every page for the totals. Walk every page (25 by default; set `per_page` as high as 100) before listing books, or the per-book sections come out short.
 
 ## Value
 

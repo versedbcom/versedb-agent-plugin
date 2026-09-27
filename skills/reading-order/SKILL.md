@@ -25,7 +25,7 @@ If the user names only a Title with several volumes, list the candidate volumes 
 
 1. Pull the issue set for the resolved entity.
 2. Order by in-story chronology: issue number within a volume; for events, lead title first then tie-ins in published order; for multi-volume arcs, follow the arc's own sequence from `get-tool` (`type: story_arc`).
-3. Walk every page (25 by default; pass `per_page` up to 100) so long runs aren't truncated.
+3. Walk every page (25 by default; set `per_page` as high as 100) so long runs aren't truncated.
 
 ## Present it
 

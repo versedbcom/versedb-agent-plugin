@@ -15,7 +15,7 @@ The VerseDB MCP needs a Pro subscription for every tool, search included. If a c
 2. **Search each thread** with `search-tool`, setting `type` per thread (`series`, `creator`, `event`, and so on), then `get-tool` for detail. Follow the links out: an event into its tie-in series, a creator into their runs and collaborators.
 3. **Cross-check** anything that matters. A first appearance, a publication date, or who created whom should agree across more than one record, and a character's recorded debut should match the issue's `key_issue_reasons` from `get-tool` (`type: issue`). Where the data is thin or contradicts itself, say so. Don't smooth it over and don't fill gaps from memory.
 4. **Respect the data model.** A Title is a franchise, a Series is one volume or run, an Issue is one book. Creator credits are role-scoped, and one Title can span many volumes across decades. The `versedb://entity-types`, `versedb://creator-roles`, `versedb://mediums`, and `versedb://publishers` resources give the canonical vocabulary.
-5. **Walk every page.** Paged tools return 25 by default (pass `per_page` up to 100); long runs and big crossovers go past one page. `search-tool` doesn't page, so raise its `limit` (up to 50) or narrow the query.
+5. **Walk every page.** Paged tools return 25 by default (set `per_page` as high as 100); long runs and big crossovers go past one page. `search-tool` doesn't page, so raise its `limit` (up to 50) or narrow the query.
 
 If the user's instructions conflict with anything here, follow the user.
 
