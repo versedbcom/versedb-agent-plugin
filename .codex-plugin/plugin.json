@@ -1,6 +1,6 @@
 {
   "name": "versedb",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Search, catalog, and discover comics through the VerseDB MCP. Bundles the connection plus skills for reading orders, collection insights, discovery, pull-list planning, quick cataloging, character dossiers, and creator spotlights.",
   "author": {
     "name": "VerseDB",
@@ -31,6 +31,8 @@
     "category": "Productivity",
     "websiteURL": "https://versedb.com",
     "privacyPolicyURL": "https://versedb.com/policy/privacy",
-    "termsOfServiceURL": "https://versedb.com/policy/terms"
+    "termsOfServiceURL": "https://versedb.com/policy/terms",
+    "logo": "./.claude-plugin/icon.png",
+    "composerIcon": "./.claude-plugin/icon.png"
   }
 }
