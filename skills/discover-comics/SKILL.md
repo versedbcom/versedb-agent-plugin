@@ -25,4 +25,4 @@ Walk every page of any list you pull before ranking (25 by default; set `per_pag
 
 A short ranked list, 5–8 picks rather than a dump. Write each as `Series (year), one-line why (the signal behind it)`. Group them loosely: a few safe bets, then a couple of wilder swings. Say where to start, tying in the `reading-order` skill for anything with a complex entry point. If you quote a value, state the grade; prices are grade-dependent.
 
-End by offering to save picks to a list (`list-tool`: `create`, then `add_item`) or add to their pull list or collection. Confirm before writing.
+End by offering to save picks to a list (`create-list-tool`, then `add-list-item-tool`) or add to their pull list or collection. When the request includes saving or adding the picks, resolve the targets and complete those writes without a second confirmation. Recommendations alone do not authorize writes.

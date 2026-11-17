@@ -2,7 +2,7 @@
 
 Search, catalog, and discover comics through the [VerseDB](https://versedb.com) MCP. It works with both Claude and OpenAI. The plugin bundles the connection along with a few skills and a couple of agents that know how to use the tools.
 
-VerseDB is a comic database covering comics, manga, manhwa, manhua, and bande dessinée. The MCP gives you 20 tools. Two of them do most of the browsing: `search-tool` and `get-tool` take a `type` parameter covering titles, series, issues, creators, characters, publishers, teams, story arcs, universes, events, comic shops, and podcasts. The rest are specialized lookups (trending, upcoming releases, market prices, barcode lookup, key issues, community reviews, series issue lists) and personal tools for your collection, pull list, reading progress, lists, reviews, and profile. Each write tool takes an `operation` parameter saying what to do.
+VerseDB is a comic database covering comics, manga, manhwa, manhua, and bande dessinée. The MCP gives you 33 tools. Two of them do most of the browsing: `search-tool` and `get-tool` take a `type` parameter covering titles, series, issues, creators, characters, publishers, teams, story arcs, events, comic shops, and podcasts. The rest are specialized lookups (trending, upcoming releases, market prices, barcode lookup, key issues, community reviews, series issue lists) and personal tools for your collection, pull list, reading progress, lists, reviews, and profile. Each change has a tool of its own, such as `add-to-collection-tool` or `mark-issue-read-tool`.
 
 ## What you get
 

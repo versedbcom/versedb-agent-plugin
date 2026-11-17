@@ -1,11 +1,11 @@
 ---
 name: quick-catalog
-description: Bulk-adds comics to the user's VerseDB collection from a pasted list, a series plus issue range, a description of a longbox, or a photo of a cover or barcode. It resolves each book and confirms the matches before writing anything. Use when the user says "add these to my collection", "catalog these", "I just bought…", "log this stack", sends a picture of a comic to add, or pastes a list of issues to record.
+description: Bulk-adds comics to the user's VerseDB collection from a pasted list, a series plus issue range, a description of a longbox, or a photo of a cover or barcode. It resolves each book and verifies the matches and writes the requested additions without a second approval. Use when the user says "add these to my collection", "catalog these", "I just bought…", "log this stack", sends a picture of a comic to add, or pastes a list of issues to record.
 ---
 
 # Quick catalog
 
-Get a stack of comics into the user's collection, matched correctly, asking as few questions as possible. The whole VerseDB MCP is Pro-only. If any call (e.g. `collection-tool` (`operation: add`)) returns an auth/subscription error (`pro_required` / HTTP 402), tell the user it needs Pro and stop.
+Get a stack of comics into the user's collection, matched correctly, asking as few questions as possible. The whole VerseDB MCP is Pro-only. If any call (e.g. `add-to-collection-tool`) returns an auth/subscription error (`pro_required` / HTTP 402), tell the user it needs Pro and stop.
 
 ## Parse the input
 
@@ -36,10 +36,10 @@ For each entry:
    - `#0`, `#-1`, decimal (`#1.1`), and annuals are real, separate issues.
 3. **Collect ambiguous and not-found entries into a list. Do not guess.** Resolve everything resolvable first, then present the leftovers for the user to disambiguate in one batch.
 
-## Confirm, then write
+## Verify, then write
 
-- Show the resolved set as a table (`Series (year) #N — grade/condition`) and the unresolved set separately. Get a go-ahead before writing.
-- `collection-tool` (`operation: add`) per book. Walk the list; **verify after writing** by reading back (`get-my-collection-tool`) that the count increased by the expected amount.
+- Show the resolved set as a table (`Series (year) #N — grade/condition`) and the unresolved set separately. Continue with the resolved requested additions without another go-ahead; ask only about ambiguous entries.
+- `add-to-collection-tool` per book. Walk the list; **verify after writing** by reading back (`get-my-collection-tool`) that the count increased by the expected amount.
 - Skip duplicates already in the collection rather than double-adding; report them.
 - Walk every page (25 by default; set `per_page` as high as 100) of `get-my-collection-tool` for the dupe check and the read-back, and of `get-series-issues-tool` for a long range. Page one alone misses books.
 
@@ -47,4 +47,4 @@ For each entry:
 
 Summarize: added N, skipped M dupes, K still need the user's input. For the leftovers, give the candidate options so the next round takes one reply.
 
-Offer to record grades/conditions you didn't have, or to start a want-list (`list-tool` (`operation: create`)) for anything they don't own yet. If they're hunting a specific cover, include its `variant_id` on `add_item`; leave it off when any printing will do.
+Offer to record grades/conditions you didn't have, or to start a want-list (`create-list-tool`) for anything they don't own yet. If they're hunting a specific cover, include its `variant_id` on `add-list-item-tool`; leave it off when any printing will do.

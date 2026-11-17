@@ -27,4 +27,4 @@ If the user's instructions conflict with anything here, follow the user.
 - **Gaps:** what the data doesn't cover, what was ambiguous, what you couldn't cross-check.
 - **Where to start:** a concrete entry point to read or collect, plus follow-ups like a reading order or a character profile.
 
-This skill is read-only. Don't call `collection-tool`, `list-tool`, `review-tool`, `pull-list-tool`, or `read-status-tool`. Report what you found and let the user decide what to change.
+This skill is read-only. Don't call any tool that changes the user's collection, lists, reviews, pull list or reading status. Report what you found and let the user decide what to change.

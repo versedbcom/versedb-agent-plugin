@@ -29,4 +29,4 @@ A creator's contribution is **role-scoped**: the same person may write one book 
 3. **Full credits by role:** grouped (As writer / As artist / Covers / Editor), runs collapsed into ranges, scannable.
 4. **If you liked X, read Y.** Adjacent picks within their catalog.
 
-End by offering to build a reading list of a chosen run (`list-tool`: `create`, then `add_item`), pull the run into the collection, or hand off to `reading-order` for a deep run.
+End by offering to build a reading list of a chosen run (`create-list-tool`, then `add-list-item-tool`), pull the run into the collection, or hand off to `reading-order` for a deep run.

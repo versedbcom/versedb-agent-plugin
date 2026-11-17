@@ -32,6 +32,6 @@ If the user names only a Title with several volumes, list the candidate volumes 
 - A numbered list, each line `Series (year) #N` plus a one-line note taken from the issue's `solicitation` when it has one. The MCP carries no plot summaries, so leave the note off rather than writing one from memory. Mark key issues (1st appearance, death, origin) inline.
 - Call out optional tie-ins separately from the essential spine.
 - If the run is long, offer the collected-edition path (which trades to buy) as an alternative to single issues.
-- End by offering to save the order as a list (`list-tool`: `create`, then `add_item`) or add the issues to their pull list / collection.
+- End by offering to save the order as a list (`create-list-tool`, then `add-list-item-tool`) or add the issues to their pull list / collection.
 
 The server ships a `reading-order-prompt` prompt; prefer it for a straight start-to-finish path.

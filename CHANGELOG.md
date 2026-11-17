@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.16
+
+- New icon. Market prices skills describe the Market tab's data. Tool list and character dossier match the current MCP.
+
 ## 0.1.15
 
 - Update
